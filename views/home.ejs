@@ -1,0 +1,56 @@
+<%- include('partials/header') %>
+
+<section class="hero-section rounded-3 p-4 p-md-5 mt-4 text-white">
+  <div class="row align-items-center g-4">
+    <div class="col-lg-7">
+      <p class="text-uppercase small fw-semibold mb-2">SQL based transaction management</p>
+      <h1 class="display-5 fw-bold">UPI Transaction Management System</h1>
+      <p class="lead mb-4">Register users, link bank accounts, send money, track payments, and maintain reliable transaction history.</p>
+      <% if (currentUser) { %>
+        <a href="/dashboard" class="btn btn-light btn-lg">Open Dashboard</a>
+      <% } else { %>
+        <a href="/signup" class="btn btn-light btn-lg me-2">Create Account</a>
+        <a href="/login" class="btn btn-outline-light btn-lg">Login</a>
+      <% } %>
+    </div>
+    <div class="col-lg-5">
+      <div class="feature-panel">
+        <div class="d-flex justify-content-between border-bottom pb-2 mb-3">
+          <span>Secure Login</span>
+          <strong>bcrypt</strong>
+        </div>
+        <div class="d-flex justify-content-between border-bottom pb-2 mb-3">
+          <span>Database</span>
+          <strong>MySQL</strong>
+        </div>
+        <div class="d-flex justify-content-between">
+          <span>Architecture</span>
+          <strong>MVC</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="row g-3 mt-4">
+  <div class="col-md-4">
+    <div class="info-card">
+      <h5>Bank Accounts</h5>
+      <p>Link multiple accounts to a user and bank with IFSC, balance, and UPI PIN.</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="info-card">
+      <h5>UPI Transfers</h5>
+      <p>Validate receiver UPI ID, PIN, and balance before moving money safely.</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="info-card">
+      <h5>History</h5>
+      <p>Search transactions by reference number and filter by payment status.</p>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
